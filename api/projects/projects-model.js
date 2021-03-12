@@ -7,9 +7,13 @@ module.exports = {
   update,
   remove,
   getProjectActions,
+  getbyId,
 };
 
-function get(id) {
+function get(){
+  return db('projects');
+}
+function getbyId(id) {
   let query = db("projects as p");
 
   if (id) {
